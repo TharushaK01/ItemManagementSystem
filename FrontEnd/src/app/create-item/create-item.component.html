@@ -1,0 +1,25 @@
+<div class="col-md-6 offset-md-3">
+<h3>Create Item</h3>
+<form (ngSubmit) = "onSubmit()">
+    <div class="form-group">
+        <label>Item No</label>
+        <input type="text" class="form-control" id="itemNo"
+           [(ngModel)]="item.itemNo" name="itemName">
+    </div>
+
+    <div class="form-group">
+        <label>Item Name</label>
+        <input type="text" class="form-control" id="itemName"
+           [(ngModel)]="item.itemName" name="itemName">
+    </div>
+
+    <div class="form-group">
+        <label>Price(LKR)</label>
+        <input type="text" class="form-control" id="price"
+           [(ngModel)]="item.price" name="price">
+    </div>
+
+    <button class="btn" type="submit" style="background-color: darkviolet; color: white; margin-top: 20px;">Submit</button>
+</form>
+</div>
+

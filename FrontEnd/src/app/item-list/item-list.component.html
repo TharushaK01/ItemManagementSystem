@@ -1,0 +1,23 @@
+<h2> Item List </h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Item No</th>
+            <th style="padding-left: 80px;">Item Name</th>
+            <th style="padding-left: 80px;">Price(LKR)</th>
+            <th style="padding-left: 80px;">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let item of items">
+            <td>{{item.itemNo}}</td>
+            <td style="padding-left: 80px;">{{item.itemName}}</td>
+            <td style="padding-left: 80px;" >{{item.price}}</td>
+            <td style="padding-left: 80px;">
+                <button (click)="updateItem(item.id)" class="btn" style="background: linear-gradient(to right, green, darkviolet); color: white; border: none;">Update</button>
+                <button (click)="deleteItem(item.id)" class="btn" style="background: linear-gradient(to right, red, darkviolet); color: white; margin-left: 10px; border: none;">Delete</button>
+                <button (click)="itemDetails(item.id)" class="btn" style="background: linear-gradient(to right, blue, darkviolet); color: white; margin-left: 10px; border: none;">View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
